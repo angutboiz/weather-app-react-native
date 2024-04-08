@@ -5,24 +5,10 @@ Weather Appication using framework React Native for smartphones
 ## Installation
 
 ```bash
-git clone 
+git clone https://github.com/angutboiz/weather-app-react-native.git
+npm install
 npm run web
 ```
-## Usage
-
-```python
-import foobar
-
-# returns 'words'
-foobar.pluralize('word')
-
-# returns 'geese'
-foobar.pluralize('goose')
-
-# returns 'phenomenon'
-foobar.singularize('phenomena')
-```
-
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first
