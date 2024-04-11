@@ -9,6 +9,7 @@ git clone https://github.com/angutboiz/weather-app-react-native.git
 npm install
 npm run web
 ```
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first
