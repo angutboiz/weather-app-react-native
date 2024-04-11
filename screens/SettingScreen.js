@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, ScrollView } from "react-native";
 import tw from "twrnc";
 const SettingScreen = () => {
   const units = [
@@ -30,27 +30,31 @@ const SettingScreen = () => {
         },
       ]}
     >
-      <View style={tw`w-full mb-16`}>
-        <Text style={tw`text-gray-400 font-semibold text-xl mb-4`}>Units</Text>
-        <View style={tw`w-full pb-6 rounded-2xl bg-[#13162D] text-white`}>
-          {units.map((item, index) => (
-            <View
-              key={index}
-              style={tw` flex flex-row items-center justify-between border-b-2 border-gray-200 py-4 mx-4`}
-            >
-              <Text style={tw`text-white text-xl`}>{item.label}</Text>
-              <TouchableOpacity>
-                <Text style={tw`text-blue-700 text-lg`}>{item.value}</Text>
-              </TouchableOpacity>
-            </View>
-          ))}
+      <ScrollView style={tw`w-full h-full`}>
+        <View style={tw`w-full mb-16`}>
+          <Text style={tw`text-gray-400 font-semibold text-xl mb-4`}>
+            Units
+          </Text>
+          <View style={tw`w-full pb-6 rounded-2xl bg-[#13162D] text-white`}>
+            {units.map((item, index) => (
+              <View
+                key={index}
+                style={tw` flex flex-row items-center justify-between border-b-2 border-gray-200 py-4 mx-4`}
+              >
+                <Text style={tw`text-white text-xl`}>{item.label}</Text>
+                <TouchableOpacity>
+                  <Text style={tw`text-blue-700 text-lg`}>{item.value}</Text>
+                </TouchableOpacity>
+              </View>
+            ))}
+          </View>
         </View>
-      </View>
-      <View style={tw`w-full py-4 rounded-full bg-[#13162D] text-white px-8`}>
-        <TouchableOpacity>
-          <Text style={tw`text-white text-xl`}>About Weather App {">"}</Text>
-        </TouchableOpacity>
-      </View>
+        <View style={tw`w-full py-4 rounded-full bg-[#13162D] text-white px-8`}>
+          <TouchableOpacity>
+            <Text style={tw`text-white text-xl`}>About Weather App {">"}</Text>
+          </TouchableOpacity>
+        </View>
+      </ScrollView>
     </View>
   );
 };
